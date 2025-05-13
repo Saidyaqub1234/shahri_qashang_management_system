@@ -10,7 +10,6 @@
 
       <form method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
         @csrf
-
         <div class="mb-3">
             <label class="form-label"><i class="bi bi-image"></i> Upload Profile Image</label>
             <div class="input-group">

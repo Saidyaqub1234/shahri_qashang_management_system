@@ -255,16 +255,16 @@
               </li>
 
               <!-- Sales -->
-              <li class="nav-item {{ request()->routeIs('admin.customers.sales', 'admin.customer.add.sale') ? 'active' : '' }}">
-                <a data-bs-toggle="collapse" href="#sales" aria-expanded="{{ request()->routeIs('admin.customers.sales', 'admin.customer.add.sale') ? 'true' : 'false' }}">
+              <li class="nav-item {{ request()->routeIs('sales.index', 'sales.create') ? 'active' : '' }}">
+                <a data-bs-toggle="collapse" href="#sales" aria-expanded="{{ request()->routeIs('sales.index', 'sales.create') ? 'true' : 'false' }}">
                   <i class="fas fa-shopping-cart"></i>
                   <p>Sales</p>
                   <span class="caret"></span>
                 </a>
-                <div class="collapse {{ request()->routeIs('admin.customers.sales', 'admin.customer.add.sale') ? 'show' : '' }}" id="sales">
+                <div class="collapse {{ request()->routeIs('sales.index', 'sales.create') ? 'show' : '' }}" id="sales">
                   <ul class="nav nav-collapse">
-                    <li><a href="{{ route('admin.customers.sales') }}"><span class="sub-item">Sales</span></a></li>
-                    <li><a href="{{ route('admin.customer.add.sale') }}"><span class="sub-item">Add Sale</span></a></li>
+                    <li><a href="{{ route('sales.index') }}"><span class="sub-item">Sales</span></a></li>
+                    <li><a href="{{ route('sales.create') }}"><span class="sub-item">Add Sale</span></a></li>
                   </ul>
                 </div>
               </li>
@@ -280,6 +280,21 @@
                   <ul class="nav nav-collapse">
                     <li><a href="{{ route('currency.index') }}"><span class="sub-item">Currencies</span></a></li>
                     <li><a href="{{ route('currency.create') }}"><span class="sub-item">Add Currency</span></a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- Saraf -->
+              <li class="nav-item {{ request()->routeIs('saraf.index', 'saraf.create') ? 'active' : '' }}">
+                <a data-bs-toggle="collapse" href="#saraf" aria-expanded="{{ request()->routeIs('saraf.index', 'saraf.create') ? 'true' : 'false' }}">
+                  <i class="fas fa-money-bill-wave"></i>
+                  <p>Saraf</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse {{ request()->routeIs('saraf.index', 'saraf.create') ? 'show' : '' }}" id="saraf">
+                  <ul class="nav nav-collapse">
+                    <li><a href="{{ route('saraf.index') }}"><span class="sub-item">Sarafs</span></a></li>
+                    <li><a href="{{ route('saraf.create') }}"><span class="sub-item">Add Saraf</span></a></li>
                   </ul>
                 </div>
               </li>

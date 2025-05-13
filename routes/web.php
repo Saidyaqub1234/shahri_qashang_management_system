@@ -8,9 +8,11 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContainerController;
 use App\Http\Controllers\CurrancyController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CustomerSaleController;
 use App\Http\Controllers\ProductTypeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PurchaseTypeController;
+use App\Http\Controllers\SarafController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,14 +52,14 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('/purchase_type',PurchaseTypeController::class);
     Route::resource('/container',ContainerController::class);
     Route::resource('/currency',CurrancyController::class);
+    Route::resource('/sales',CustomerSaleController::class);
+    Route::resource('/saraf', SarafController::class);
 
 
     Route::get('/product',[AdminController::class,'product'])->name('admin.product');
     Route::get('/product/add',[AdminController::class,'add_product'])->name('admin.add.product');
     Route::get('/customer/add',[AdminController::class,'add_customer'])->name('admin.add.customer');
     Route::get('/customers',[AdminController::class,'customer'])->name('admin.customer');
-    Route::get('/customers/sales',[AdminController::class,'customers_sales'])->name('admin.customers.sales');
-    Route::get('/customer/sales/add',[AdminController::class,'add_customer_sale'])->name('admin.customer.add.sale');
 
     Route::get('/purchases',[AdminController::class,'purchases'])->name('admin.purchases');
     Route::get('/purchase/add',[AdminController::class,'add_purchase'])->name('admin.purchase.add');
